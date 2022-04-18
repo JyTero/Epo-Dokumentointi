@@ -1,37 +1,73 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/JyTero/Epo-Dokumentointi/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<h3>Epo Dokumentoinitehtävä -palautus</h3>
+<p>Tehtävänannossa käsketään tekemään yhtenäinen palautus, jossa koko tiimi kommentoi samaa samalla tavalla ja palauttaa saman palautuksen. Ymmärsin, että palautuksen pitää olla yhdessä luodusta desgn pattern -esimerkistä, tiimini tapauksessa adapterista. Kommentoin koodin, koodi alla, ja pistin tiimille jakoon. En tosin muistanut manita mistään tästä muulle tiimille, joka sitemin rupesin työstämään tehtävää. En ollut nähnyt aiheesta käytyä keskustelua, enkä siksi mitenkään osallistunut muun tiimin palautukseen.</p>
+<p>Irtopisteiden toivossa palautan tämä vaikka se onkin erivä muusta ryhmästä. Yrittänyttä ei laiteta jne.</p>
 
 ```markdown
-Syntax highlighted code block
+using System;
 
-# Header 1
-## Header 2
-### Header 3
+namespace ConsoleApp2
+{
+    /// <summary>
+    /// A program for figuring out, how much sugar, yeast and water you need. Input in metric, output in American units.
+    /// </summary>
+    class Program
+    {
+        public static float Sugar;
+        public static float Yeast;
+        public static float Water;
 
-- Bulleted
-- List
+        public static void Main()
+        {
+            Console.WriteLine("How much sugar u need in kilos");
+            string input = Console.ReadLine();
+            Sugar = ParseInputs(input);
 
-1. Numbered
-2. List
+            Console.WriteLine("How much Yeast u need in grams");
+            input = Console.ReadLine();
+            Yeast = ParseInputs(input);
 
-**Bold** and _Italic_ and `Code` text
+            Console.WriteLine("How much Water u need in Liters");
+            input = Console.ReadLine();
+            Water = ParseInputs(input);
 
-[Link](url) and ![Image](src)
+            ConvertToUSA();
+
+            Console.WriteLine("For strong homemade brew you need " + Round(Sugar) + " pound of Sugar and " + Round(Yeast) + " ounces of yeast and mix with " + Round(Water) + " pounds of waterfl");
+        }
+        /// <summary>
+        /// Input will changed from string to float for later conversion
+        /// </summary>
+        /// <param name="input">String as user typed it </param>
+        /// <returns>Returns input as a float</returns>
+        public static float ParseInputs(string input)
+        {
+            float inputFloat;
+            float.TryParse(input, out inputFloat);
+            return inputFloat;
+        }
+
+        /// <summary>
+        /// Converts units from metric to imperial
+        /// </summary>
+        public static void ConvertToUSA()
+        {
+            Sugar = Sugar * 2.205f; //pound
+            Yeast = Yeast / 28.35f; //ounces
+            Water = Water * 4.227f;//cup
+        }
+
+        /// <summary>
+        /// rounds the number for more pleasant output
+        /// </summary>
+        /// <param name="input">Float of ammount if ingridient</param>
+        /// <returns>Returns neater looking version of the number</returns>
+        public static float Round(float input)
+        {
+            float fc = (float)Math.Round(input * 100f) / 100f;
+            return fc;
+        }
+
+    }
+}
+
 ```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JyTero/Epo-Dokumentointi/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
