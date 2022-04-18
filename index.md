@@ -1,6 +1,7 @@
-<h3>Epo Dokumentoinitehtävä -palautus</h3>
-<p>Tehtävänannossa käsketään tekemään yhtenäinen palautus, jossa koko tiimi kommentoi samaa samalla tavalla ja palauttaa saman palautuksen. Ymmärsin, että palautuksen pitää olla yhdessä luodusta desgn pattern -esimerkistä, tiimini tapauksessa adapterista. Kommentoin koodin, koodi alla, ja pistin tiimille jakoon. En tosin muistanut manita mistään tästä muulle tiimille, joka sitemin rupesin työstämään tehtävää. En ollut nähnyt aiheesta käytyä keskustelua, enkä siksi mitenkään osallistunut muun tiimin palautukseen.</p>
-<p>Irtopisteiden toivossa palautan tämä vaikka se onkin erivä muusta ryhmästä. Yrittänyttä ei laiteta jne.</p>
+<h3>Epo Dokumentointitehtävä -palautus</h3>
+<p>Tehtävänannossa käsketään tekemään yhtenäinen palautus, jossa koko tiimi kommentoi samaa samalla tavalla ja palauttaa saman palautuksen. Ymmärsin, että palautuksen pitää olla yhdessä luodusta design pattern -esimerkistä, tiimini tapauksessa adapterista. Kommentoin koodin, koodi alla, ja pistin tiimille jakoon. En tosin muistanut mainita mistään tästä muulle tiimille, joka sitemin rupesin työstämään tehtävää. En ollut nähnyt aiheesta käytyä keskustelua, enkä siksi mitenkään osallistunut muun tiimin palautukseen.</p>
+<p>Irtopisteiden toivossa palautan tämä, vaikka se onkin eriävä muusta ryhmästä. Yrittänyttä ei laiteta jne.</p>
+
 
 ```markdown
 using System;
